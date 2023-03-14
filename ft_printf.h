@@ -48,6 +48,8 @@ int		ft_dot_flag(const char *str, int start, t_flags *flags, va_list args);
 int		ft_strlen(const char *s);
 int		ft_putst(char *str, int smth);
 char 	ft_putchar(char c);
+char	*ft_itoa(int n);
+char	*ft_str_tolower(char *str);
 char	*ft_strdup(const char *s);
 char    *ft_utl_base(unsigned long long number, int base);
 t_flags	ft_minus_flag(t_flags flags);
