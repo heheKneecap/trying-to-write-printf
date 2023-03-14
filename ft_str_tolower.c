@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_do_char.c                                       :+:      :+:    :+:   */
+/*   ft_str_tolower.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mshchuts <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/08 15:09:43 by mshchuts          #+#    #+#             */
-/*   Updated: 2023/03/08 15:10:04 by mshchuts         ###   ########.fr       */
+/*   Created: 2023/03/08 15:21:56 by mshchuts          #+#    #+#             */
+/*   Updated: 2023/03/08 15:22:13 by mshchuts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_printf.c"
 
-int	ft_do_char(char c, t_flags flags)
+char	*ft_str_tolower(char *str)
 {
-	int count;
+    int i;
 
-	count = 0;
-	if (flags.minus == 1)
-		ft_putchar(c);
-	count = ft_do_width(flags.width, 1, 0);
-	if (flags.minus == 0)
-		ft_putchar(c);
-	return (count + 1);
+    i = 0;
+    while(str[i])
+    {
+	    str[i] = ft_tolower(str[i]);
+        i++;
+    }
+    return (str);
 }

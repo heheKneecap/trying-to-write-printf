@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_do_char.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mshchuts <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/08 15:09:43 by mshchuts          #+#    #+#             */
-/*   Updated: 2023/03/08 15:10:04 by mshchuts         ###   ########.fr       */
+/*   Created: 2023/03/08 15:22:51 by mshchuts          #+#    #+#             */
+/*   Updated: 2023/03/08 15:23:07 by mshchuts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_printf.c"
 
-int	ft_do_char(char c, t_flags flags)
+int	ft_tolower(int c)
 {
-	int count;
-
-	count = 0;
-	if (flags.minus == 1)
-		ft_putchar(c);
-	count = ft_do_width(flags.width, 1, 0);
-	if (flags.minus == 0)
-		ft_putchar(c);
-	return (count + 1);
+	if (c >= 65 && c <= 90)
+	{
+		c += 32;
+	}
+	return (c);
 }
